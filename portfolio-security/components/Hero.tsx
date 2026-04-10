@@ -88,9 +88,17 @@ export default function Hero() {
           </motion.p>
 
           {nameLines.map(({ text, italic }, i) => (
-            <div key={text} className="overflow-hidden" style={{ lineHeight: 0.92 }}>
+            <div key={text} style={{ overflow: "hidden", lineHeight: 0.92 }}>
               <motion.span
-                className={`block font-cormorant font-light tracking-[-0.02em] text-[clamp(64px,9.5vw,140px)]${italic ? " italic text-gold" : ""}`}
+                style={{
+                  display: "block",
+                  fontFamily: "var(--font-cormorant-garamond), 'Cormorant Garamond', serif",
+                  fontSize: "clamp(64px, 9.5vw, 140px)",
+                  fontWeight: 300,
+                  letterSpacing: "-0.02em",
+                  fontStyle: italic ? "italic" : "normal",
+                  color: italic ? "#c8a96e" : "inherit",
+                }}
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{
@@ -146,7 +154,7 @@ export default function Hero() {
               key={s.label}
               className={`pr-8 ${i < stats.length - 1 ? "border-r border-white/[0.055] mr-8" : ""}`}
             >
-              <div className="font-cormorant text-[clamp(28px,3vw,42px)] font-light text-gold leading-none mb-1">
+              <div className="font-light text-gold leading-none mb-1" style={{ fontFamily: "var(--font-cormorant-garamond), serif", fontSize: "clamp(28px, 3vw, 42px)" }}>
                 {s.value}
                 {s.suffix}
               </div>

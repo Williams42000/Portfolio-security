@@ -23,7 +23,13 @@ export default function SectionHeader({ num, title }: SectionHeaderProps) {
       </motion.span>
 
       <motion.h2
-        className="font-cormorant text-[clamp(38px,4.5vw,62px)] font-light tracking-[-0.01em] leading-none"
+        style={{
+          fontFamily: "var(--font-cormorant-garamond), 'Cormorant Garamond', serif",
+          fontSize: "clamp(38px, 4.5vw, 62px)",
+          fontWeight: 300,
+          letterSpacing: "-0.01em",
+          lineHeight: 1,
+        }}
         initial={{ opacity: 0, y: 24 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}

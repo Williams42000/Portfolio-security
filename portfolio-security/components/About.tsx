@@ -18,7 +18,7 @@ export default function About() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
         <Reveal>
-          <p className="font-cormorant text-[23px] font-light leading-[1.65]">
+          <p style={{ fontFamily: "var(--font-cormorant-garamond), 'Cormorant Garamond', serif", fontSize: "23px", fontWeight: 300, lineHeight: 1.65 }}>
             Professionnel de la sécurité actif à Montréal depuis plus de{" "}
             <em className="text-gold italic">quatre ans</em>, Williams cumule une
             expérience riche dans des environnements exigeants : centres de santé,

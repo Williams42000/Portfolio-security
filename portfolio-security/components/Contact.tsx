@@ -13,7 +13,7 @@ export default function Contact() {
       className="px-15 py-[120px] min-h-[65vh] flex flex-col justify-center border-t border-white/[0.055] bg-bg-dark2"
     >
       <Reveal>
-        <h2 className="font-cormorant text-[clamp(44px,6vw,88px)] font-light leading-[1.08] mb-12">
+        <h2 style={{ fontFamily: "var(--font-cormorant-garamond), 'Cormorant Garamond', serif", fontSize: "clamp(44px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.08 }} className="mb-12">
           Discutons de votre
           <br />
           prochain <em className="text-gold italic">projet.</em>
